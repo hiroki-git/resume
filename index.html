@@ -1,17 +1,63 @@
-<div class="tab_area">
-    <input type="radio" name="tab" id="tab1" checked>
-    <label class="btn_tab" for="tab1">タブ１</label>
-    <div class="content">
-      <div class="inner">タブ１のコンテンツ</div>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>職務経歴書</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+</head>
+<body>
+    <div class="tabs">
+        <input id="all" type="radio" name="tab_item" checked>
+        <label class="tab_item" for="all">基本情報</label>
+        <input id="programming" type="radio" name="tab_item">
+        <label class="tab_item" for="programming">スキル・経験</label>
+        <input id="design" type="radio" name="tab_item">
+        <label class="tab_item" for="design">業務経歴</label>
+        <div class="tab_content" id="all_content">
+            <div class="tab_content_description">
+                <p class="c-txtsp"> <i class="fas fa-user" style="margin-left: 10px;"></i> 基本情報 - <span style="font-size: 14px;">Profile</span></p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="4" class="header">基本情報</th>
+                        </tr>
+                        <tr>
+                            <th>名前</th><td>K.H</td>
+                        </tr>
+                        <tr>
+                            <th>性別</th><td>男</td>
+                        </tr>
+                        <tr>
+                            <th>生年月日</th><td>1986年6月20日</td>
+                        </tr>
+                        <tr>
+                            <th>住所</th><td>京都府 京都市</td>
+                        </tr>
+                        <tr>
+                            <th>最寄り駅</th><td>JR京都駅 <br> JR梅小路京都西駅</td>
+                        </tr>
+                        <tr>
+                            <th>免許・資格</th><td>ITパスポート<br> Oracle Java Silver</td>
+                        </tr>
+                        <tr>
+                            <th>特技</th><td>将棋</td>
+                        </tr>
+                    </thead>
+                </table>
+
+            </div>
+        </div>
+        <div class="tab_content" id="programming_content">
+            <div class="tab_content_description">
+                <p class="c-txtsp">スキル・経験の内容がここに入ります</p>
+            </div>
+        </div>
+        <div class="tab_content" id="design_content">
+            <div class="tab_content_description">
+                <p class="c-txtsp">業務経歴の内容がここに入ります</p>
+            </div>
+        </div>
     </div>
-    <input type="radio" name="tab" id="tab2">
-    <label class="btn_tab" for="tab2">タブ２</label>
-    <div class="content">
-      <div class="inner">タブ２のコンテンツ</div>
-    </div>
-    <input type="radio" name="tab" id="tab3">
-    <label class="btn_tab" for="tab3">タブ３</label>
-    <div id="tab3_cont" class="content">
-      <div class="inner">タブ３のコンテンツ</div>
-    </div>
-  </div>
+</body>
+</html>
