@@ -1,71 +1,50 @@
-/*タブ切り替え全体のスタイル*/
-.tabs {
-    margin-top: 20px;
-    width: 100%;
+/*input要素は非表示*/
+input {
+    display: none;
   }
-  /*タブのスタイル*/
-  .tab_item {
-    cursor: pointer;
-    width: calc(100% / 3);
-    /*タブが増減する場合3の部分を適宜変えてください*/
-    height: 50px;
-    background: #f1f1f1;
-    color: #00b7c3;
-    line-height: 50px;
-    font-size: 16px;
-    text-align: center;
+  /*タブエリアの設定*/
+  .tab_area {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  /*タブボタン部分*/
+  label {
     display: block;
-    float: left;
+    padding: 0.5em 1em;
+    margin-right: 2px;
     border-radius: 10px 10px 0 0;
-    font-weight: bold;
-    transition: all 0.2s ease;
-    border-top: #f1f1f1 solid 1px;
-    border-left: #f1f1f1 solid 1px;
-    border-right: #f1f1f1 solid 1px;
-    box-sizing: border-box;
-    &:hover {
-      opacity: 0.75;
-    }
+    background: #e4e4e4;
+    float: left;
+    cursor: pointer;
+    order: -1;
   }
-  
-  /*ラジオボタンを全て消す*/
-  input[name="tab_item"] {
+  /*コンテンツ部分*/
+  .content {
     display: none;
+    width: 100%;
+    padding: 1em;
+    background: #E7CCE6;
   }
   
-  /*タブ切り替えの中身のスタイル*/
-  .tab_content {
-    display: none;
-    clear: both;
-    overflow: hidden;
-    padding: 20px;
+  /*フェイドインアニメーションのために透明度を０に*/
+  .inner {
+    opacity: 0;
   }
   
-  /*選択されているタブのコンテンツのみを表示*/
-  #tab_1:checked ~ #tab_item1,
-  #tab_2:checked ~ #tab_item2,
-  #tab_3:checked ~ #tab_item3,
-  #tab_4:checked ~ #tab_item4,
-  #tab_5:checked ~ #tab_item5,
-  #tab_6:checked ~ #tab_item6 {
+  /*タブを選択したとき*/
+  input:checked + .btn_tab {
+    background: #E7CCE6;
+  }
+  input:checked + .btn_tab + .content {
     display: block;
   }
   
-  /*選択されているタブのスタイルを変える*/
-  .tabs input:checked + .tab_item {
-    background: #fff;
-    color: #00b7c3;
+  /*コンテンツをフェイドインするアニメーション*/
+  input:checked + .btn_tab + .content .inner {
+    animation: fadeIn 1.5s forwards;
   }
   
-  /*以下、タブ内に表示するtableのスタイル*/
-  .tab_content table {
-    width:100%;
-    text-align: left;
-  }
-  .tab_content th {
-    min-width: 100px;
-    width: 20%;
-  }
-  .tab_content tr {
-    border-bottom: #f1f1f1 solid 1px;
+  @keyframes fadeIn {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
   }
