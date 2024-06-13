@@ -3,17 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>職務経歴書</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>職務経歴書</h1>
-    <h2>氏名: 鈴木 太郎</h2>
-    <h3>連絡先</h3>
-    <p>メール: example@example.com</p>
-    <h3>職歴</h3>
-    <ul>
-        <li>会社A (20XX年 - 20XX年): 職務内容</li>
-        <li>会社B (20XX年 - 20XX年): 職務内容</li>
-    </ul>
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, '業務内容')">業務内容</button>
+        <button class="tablinks" onclick="openTab(event, '基本情報')">基本情報</button>
+        <button class="tablinks" onclick="openTab(event, 'スキル・経験')">スキル・経験</button>
+        <button class="tablinks" onclick="openTab(event, '業務経歴')">業務経歴</button>
+    </div>
+
+    <div id="業務内容" class="tabcontent">
+        <h3>業務内容</h3>
+        <p>ここに業務内容を入力します。</p>
+    </div>
+
+    <div id="基本情報" class="tabcontent">
+        <h3>基本情報</h3>
+        <p>ここに基本情報を入力します。</p>
+    </div>
+
+    <div id="スキル・経験" class="tabcontent">
+        <h3>スキル・経験</h3>
+        <p>ここにスキル・経験を入力します。</p>
+    </div>
+
+    <div id="業務経歴" class="tabcontent">
+        <h1>職務経歴書</h1>
+        <h2>氏名: 鈴木 太郎</h2>
+        <h3>連絡先</h3>
+        <p>メール: example@example.com</p>
+        <h3>職歴</h3>
+        <ul>
+            <li>会社A (20XX年 - 20XX年): 職務内容</li>
+            <li>会社B (20XX年 - 20XX年): 職務内容</li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
