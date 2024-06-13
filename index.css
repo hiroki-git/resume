@@ -1,67 +1,71 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    line-height: 1.6;
-}
-
-h1 {
-    color: #333;
-}
-
-h2 {
-    color: #666;
-}
-
-h3 {
-    color: #444;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    background: #f4f4f4;
-    margin: 5px 0;
-    padding: 10px;
-    border: 1px solid #ddd;
-}
-
-/* Style the tab */
-.tab {
-    overflow: hidden;
-    background-color: #333;
-}
-
-/* Style the buttons inside the tab */
-.tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
+/*タブ切り替え全体のスタイル*/
+.tabs {
+    margin-top: 20px;
+    width: 100%;
+  }
+  /*タブのスタイル*/
+  .tab_item {
     cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
-    color: white;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-    background-color: #666;
-    color: white;
-}
-
-/* Style the tab content */
-.tabcontent {
+    width: calc(100% / 3);
+    /*タブが増減する場合3の部分を適宜変えてください*/
+    height: 50px;
+    background: #f1f1f1;
+    color: #00b7c3;
+    line-height: 50px;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    float: left;
+    border-radius: 10px 10px 0 0;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    border-top: #f1f1f1 solid 1px;
+    border-left: #f1f1f1 solid 1px;
+    border-right: #f1f1f1 solid 1px;
+    box-sizing: border-box;
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+  
+  /*ラジオボタンを全て消す*/
+  input[name="tab_item"] {
     display: none;
-    padding: 6px 12px;
-    border-top: none;
-}
+  }
+  
+  /*タブ切り替えの中身のスタイル*/
+  .tab_content {
+    display: none;
+    clear: both;
+    overflow: hidden;
+    padding: 20px;
+  }
+  
+  /*選択されているタブのコンテンツのみを表示*/
+  #tab_1:checked ~ #tab_item1,
+  #tab_2:checked ~ #tab_item2,
+  #tab_3:checked ~ #tab_item3,
+  #tab_4:checked ~ #tab_item4,
+  #tab_5:checked ~ #tab_item5,
+  #tab_6:checked ~ #tab_item6 {
+    display: block;
+  }
+  
+  /*選択されているタブのスタイルを変える*/
+  .tabs input:checked + .tab_item {
+    background: #fff;
+    color: #00b7c3;
+  }
+  
+  /*以下、タブ内に表示するtableのスタイル*/
+  .tab_content table {
+    width:100%;
+    text-align: left;
+  }
+  .tab_content th {
+    min-width: 100px;
+    width: 20%;
+  }
+  .tab_content tr {
+    border-bottom: #f1f1f1 solid 1px;
+  }
