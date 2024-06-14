@@ -19,8 +19,8 @@
     width: calc(100% / 3); /* 幅を等分する */
     height: 50px;
     border-bottom: 3px solid #5ab4bd;
-    border-right: 1px solid #5ab4bd; /* 追加: タブアイテムの右側にボーダーを追加 */
-    background-color: #d9d9d9;
+    border-right: 1px solid white; /* 追加: タブアイテムの右側にボーダーを追加 */
+    background-color: silver;
     line-height: 50px;
     font-size: 16px;
     text-align: center;
@@ -38,7 +38,10 @@
 }
 
 .tab_item:hover {
-    opacity: 0.75;
+    opacity: 1; /*下が透けるようにしない*/
+    background: #d9d9d9;
+    /* transition: 0.3s; スムーズな遷移効果を追加 */
+    /* box-shadow: 0 0 8px rgba(255, 255, 255, 0.8); ホバー時に白い光を追加 */
 }
 
 /*ラジオボタンを全て消す*/
