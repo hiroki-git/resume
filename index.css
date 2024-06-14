@@ -11,9 +11,10 @@
 
 /*タブのスタイル*/
 .tab_item {
-    width: calc(100%/3);
+    width: calc(100% / 3); /* 幅を等分する */
     height: 50px;
     border-bottom: 3px solid #5ab4bd;
+    border-right: 1px solid #5ab4bd; /* 追加: タブアイテムの右側にボーダーを追加 */
     background-color: #d9d9d9;
     line-height: 50px;
     font-size: 16px;
@@ -24,6 +25,11 @@
     text-align: center;
     font-weight: bold;
     transition: all 0.2s ease;
+    box-sizing: border-box; /* ボーダーを幅に含める */
+}
+
+.tab_item:last-of-type {
+    border-right: none; /* 最後のタブには右側のボーダーを付けない */
 }
 
 .tab_item:hover {
@@ -103,7 +109,7 @@ p.c-txtsp {
     background-color: black;
     color: white;
     font-size: 23px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 .first-line {
