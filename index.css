@@ -4,7 +4,7 @@
     padding-bottom: 40px;
     background-color: #fff;
     /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
-    width: 80%;
+    width: 90%;
     height: calc(100vh - 50px);
     margin: 0 auto;
 }
@@ -38,7 +38,7 @@ input[name="tab_item"] {
 /*タブ切り替えの中身のスタイル*/
 .tab_content {
     display: none;
-    padding: 40px 40px 0;
+    padding: 10px 10px 0;
     clear: both;
     overflow: hidden;
 }
@@ -57,9 +57,14 @@ input[name="tab_item"] {
     color: #fff;
 }
 
+.table-container {
+    padding: 10px 10px 0;
+}
+
+
 table {
     border-collapse: collapse;
-    width: 80%;
+    width: 100%;
     /* テーブルの横幅を70%に設定 */
     margin: 0 auto;
     /* テーブルを中央寄せに設定 */
@@ -99,4 +104,14 @@ p.c-txtsp {
     color: white;
     font-size: 23px;
     margin-bottom: 20px;
+}
+
+.first-line {
+    font-weight: bold;
+    color: rgb(180, 7, 7);
+}
+
+.third-line {
+    margin-left: 10px;
+    opacity: 0.5;
 }
