@@ -1,16 +1,21 @@
 /*タブ切り替え全体のスタイル*/
 .tabs {
-    margin-top: 50px;
     padding-bottom: 40px;
     background-color: #fff;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
-    width: 90%;
-    height: calc(100vh - 50px);
+    width: 80%;
+    /* height: calc(100vh - 50px); */
     margin: 0 auto;
 }
 
+.sticky {
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+  }
+
 /*タブのスタイル*/
 .tab_item {
+    margin-bottom: 20px;
     width: calc(100% / 3); /* 幅を等分する */
     height: 50px;
     border-bottom: 3px solid #5ab4bd;
