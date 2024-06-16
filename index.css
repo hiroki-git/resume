@@ -129,3 +129,10 @@ p.c-txtsp {
     margin-left: 10px;
     opacity: 0.5;
 }
+
+.bar-container {
+    background-color: gold;
+    width: calc(var(--exp-months) * 2%);
+    height: 20px;
+    position: relative;
+}
